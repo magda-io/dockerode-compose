@@ -27,6 +27,10 @@ class Compose {
     }
   }
 
+  getContainers() {
+    return services.getContainers(this.docker, this.projectName, this.recipe);
+  }
+
   async down(options) {
     var output = {};
     try { 
